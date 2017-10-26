@@ -1,0 +1,38 @@
+[
+ {
+  "docstatus": 0, 
+  "doctype": "Custom Script", 
+  "dt": "Purchase Receipt", 
+  "modified": "2017-10-26 16:26:56.870708", 
+  "name": "Purchase Receipt-Client", 
+  "script": "frappe.ui.form.on(\"Purchase Receipt\", \"validate\", function(frm,cdt,cdn) {\n  $.each(frm.doc.items, \n      function(i,v) {\n\tif (frm.doc.x_default_warehouse) {\n     \t\tv.warehouse = frm.doc.x_default_warehouse;\n\t}\n\tif (frm.doc.x_default_cost_center) {\n     \t\tv.cost_center = frm.doc.x_default_cost_center;\n\t}\n   })\n   frm.refresh_field(\"items\");\n});", 
+  "script_type": "Client"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Custom Script", 
+  "dt": "Sales Order", 
+  "modified": "2017-10-26 16:46:43.340280", 
+  "name": "Sales Order-Client", 
+  "script": "frappe.ui.form.on(\"Sales Order\", \"validate\", function(frm,cdt,cdn) {\n  $.each(frm.doc.items, \n      function(i,v) {\n\tif (frm.doc.x_default_warehouse) {\n     \t\tv.warehouse = frm.doc.x_default_warehouse;\n\t}\n   })\n   frm.refresh_field(\"items\");\n});", 
+  "script_type": "Client"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Custom Script", 
+  "dt": "Sales Invoice", 
+  "modified": "2017-10-26 17:00:12.551568", 
+  "name": "Sales Invoice-Client", 
+  "script": "frappe.ui.form.on(\"Sales Invoice\", \"validate\", function(frm,cdt,cdn) {\n  $.each(frm.doc.items, \n      function(i,v) {\n\tif (frm.doc.x_default_warehouse) {\n     \t\tv.warehouse = frm.doc.x_default_warehouse;\n\t}\n\tif (frm.doc.x_default_cost_center) {\n     \t\tv.cost_center = frm.doc.x_default_cost_center;\n\t}\n   })\n   frm.refresh_field(\"items\");\n});", 
+  "script_type": "Client"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Custom Script", 
+  "dt": "Purchase Invoice", 
+  "modified": "2017-10-26 17:21:04.449189", 
+  "name": "Purchase Invoice-Client", 
+  "script": "frappe.ui.form.on(\"Purchase Invoice\", \"validate\", function(frm,cdt,cdn) {\n  $.each(frm.doc.items, \n      function(i,v) {\n\tif (frm.doc.x_default_warehouse) {\n     \t\tv.warehouse = frm.doc.x_default_warehouse;\n\t}\n\tif (frm.doc.x_default_cost_center) {\n     \t\tv.cost_center = frm.doc.x_default_cost_center;\n\t}\n   })\n   frm.refresh_field(\"items\");\n});", 
+  "script_type": "Client"
+ }
+]
