@@ -119,5 +119,3 @@ app_license = "MIT"
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "xlevel.event.get_events"
 # }
-fixtures = [{"dt":"Custom Script", "filters": [["name", "in", ["Sales Order-Client","Sales Invoice-Client","Purchase Receipt-Client","Purchase Invoice-Client"]]]},
-{"dt":"Custom Field", "filters": [["name", "in", ["Sales Order-x_default_cost_center","Sales Order-x_default_warehouse","Sales Invoice-x_default_cost_center","Sales Invoice-x_default_warehouse","Purchase Receipt-x_default_cost_center","Purchase Receipt-x_default_warehouse","Purchase Invoice-x_default_cost_center","Purchase Invoice-x_default_warehouse"]]]}]
